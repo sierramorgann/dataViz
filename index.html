@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<head>  
-<style>
-  table {
-                border-collapse: collapse;
-                border: 2px black solid;
-                font: 12px sans-serif;
-            }
-            td {
-                border: 1px black solid;
-                padding: 5px;
-            }
-</style>
-</head> 
-<body>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script>
-d3.text("colors.csv", function(data) {
-                var parsedCSV = d3.csv.parseRows(data);
-                var container = d3.select("body")
-                    .append("table")
-                    .selectAll("tr")
-                        .data(parsedCSV).enter()
-                        .append("tr")
-                    .selectAll("td")
-                        .data(function(d) { return d; }).enter()
-                        .append("td")
-                        .text(function(d) { return d; });
-            });
-</script>
-</body>
-</html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var dataArray = [5, 40, 50, 60];
+            var width = 500;
+            var height = 500;
+
+            var widthScale = d3.scale.linear()
+                .domain([0, 60])
+                .range([0, width]);
+
+            var color = d3.scale.linear()
+                .domain([0, 60]) 
+                .range(["red", "blue"])   
+
+            var canvas = d3.select("body")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            var bars = canvas.selectAll("rect")
+                .data(dataArray)
+                .enter()
+                    .append("rect")
+                    .attr("width", function(d) {return widthScale(d); })
+                    .attr("height", 50)
+                    .attr("fill", function(d) { return color(d) })
+                    .attr("y", function(d, i) {return i * 100 });
+
+        </script>
+    </body>
+</html>     
