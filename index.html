@@ -4,26 +4,48 @@
         <meta charset="utf-8">
         <title>D3 Test</title>
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
         <style>
-        div {
-          float: left;
-          margin: 0 0 0 150px;
-          font-family: 
+        @font-face {
+            font-family: 'gotham_ultraregular';
+            src: url('gotham/gotham-ultra-webfont.eot');
+            src: url('gotham/gotham-ultra-webfont.eot?#iefix') format('embedded-opentype'),
+                 url('gotham/gotham-ultra-webfont.woff2') format('woff2'),
+                 url('gotham/gotham-ultra-webfont.woff') format('woff'),
+                 url('gotham/gotham-ultra-webfont.ttf') format('truetype'),
+                 url('gotham/gotham-ultra-webfont.svg#gotham_ultraregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+        #top {
+            padding: 15px 0 15px 0;
         }
 
-        #explanation {
-          position: absolute;
-          top: 260px;
-          left: 305px;
-          width: 140px;
-          text-align: center;
-          color: #666;
-          z-index: -1;
-}
+        a {
+            font-family: funsized;
+            font-size: 115px;
+            margin: 0 0 0 200px;
+            color: black;
+            text-decoration: none;
+        }
+
+        div {
+          float: left;
+          margin: 0 0 0 175px;
+        }
+        
+        h1 {
+            font-size: 35px;
+            margin: 55px 0 0 0;
+            font-family: 'gotham_ultraregular';
+        }
         </style>
+
     </head>
     <body>    
-
+        <p id="top"></p>
+        <a href="http://uo-nyc.com/"> UO NYC 2015 </a>
          <div id="monday"><h1>Monday</h1></div>
         <script type="text/javascript">
             var data = [100];
@@ -35,10 +57,10 @@
 
             var canvas = d3.select("#monday").append("svg")
                 .attr("width", 500)
-                .attr("height", 450);
+                .attr("height", 350);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(200,200)");
+                .attr("transform", "translate(175,175)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -61,6 +83,7 @@
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
                 .attr("text-anchor", "middle")
                 .attr("font-size", "1em")
+                .attr("fill", "white")
                 .text(function (d) {return d.data; });           
 
 
@@ -72,14 +95,14 @@
             var r = 150;
 
             var color = d3.scale.ordinal()
-                .range(["rgb(116,232,78)", "rgb(0,255,84)","rgb(231,255,1)", "rgb(82,232,211)", "rgb(98,197,255)"]);
+                .range(["rgb(116,232,78)", "rgb(0,255,84)","rgb(229,222,3)", "rgb(82,232,211)", "rgb(98,197,255)"]);
 
             var canvas = d3.select("#tuesday").append("svg")
                 .attr("width", 500)
-                .attr("height", 450);
+                .attr("height", 350);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(200,200)");
+                .attr("transform", "translate(175,175)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -102,6 +125,7 @@
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
                 .attr("text-anchor", "middle")
                 .attr("font-size", "1em")
+                .attr("fill", "white")
                 .text(function (d) {return d.data; });           
 
 
@@ -117,10 +141,10 @@
 
             var canvas = d3.select("#tuesday").append("svg")
                 .attr("width", 500)
-                .attr("height", 450);
+                .attr("height", 350);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(200,200)");
+                .attr("transform", "translate(175,175)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -143,6 +167,7 @@
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
                 .attr("text-anchor", "middle")
                 .attr("font-size", "1em")
+                .attr("fill", "white")
                 .text(function (d) {return d.data; });           
 
 
@@ -158,10 +183,10 @@
 
             var canvas = d3.select("#wednesday").append("svg")
                 .attr("width", 500)
-                .attr("height", 450);
+                .attr("height", 350);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(200,200)");
+                .attr("transform", "translate(175,175)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -184,6 +209,7 @@
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
                 .attr("text-anchor", "middle")
                 .attr("font-size", "1em")
+                .attr("fill", "white")
                 .text(function (d) {return d.data; });           
 
 
@@ -199,10 +225,10 @@
 
             var canvas = d3.select("#wednesday").append("svg")
                 .attr("width", 500)
-                .attr("height", 450);
+                .attr("height", 350);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(200,200)");
+                .attr("transform", "translate(175,175)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -225,6 +251,7 @@
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
                 .attr("text-anchor", "middle")
                 .attr("font-size", "1em")
+                .attr("fill", "white")
                 .text(function (d) {return d.data; });           
         </script>
         <div id="thursday"><h1>Thursday</h1></div>
@@ -234,14 +261,14 @@
             var r = 150;
 
             var color = d3.scale.ordinal()
-                .range(["rgb(204,32,75)", "rgb(153,100,113)", "rgb(229,65,255)", "rgb(231,255,60)", "rgb(204,193,32)"]);
+                .range(["rgb(204,32,75)", "rgb(153,100,113)", "rgb(229,65,255)", "rgb(229,222,3)", "rgb(204,193,32)"]);
 
             var canvas = d3.select("#thursday").append("svg")
                 .attr("width", 500)
-                .attr("height", 450);
+                .attr("height", 350);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(200,200)");
+                .attr("transform", "translate(175,175)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -264,6 +291,7 @@
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
                 .attr("text-anchor", "middle")
                 .attr("font-size", "1em")
+                .attr("fill", "white")
                 .text(function (d) {return d.data; });           
         </script>
         <script type="text/javascript">
@@ -276,10 +304,10 @@
 
             var canvas = d3.select("#thursday").append("svg")
                 .attr("width", 500)
-                .attr("height", 450);
+                .attr("height", 350);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(200,200)");
+                .attr("transform", "translate(175,175)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -302,6 +330,7 @@
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
                 .attr("text-anchor", "middle")
                 .attr("font-size", "1em")
+                .attr("fill", "white")
                 .text(function (d) {return d.data; });           
         </script>
         <div id="friday"><h1>Friday</h1></div>
@@ -315,10 +344,10 @@
 
             var canvas = d3.select("#friday").append("svg")
                 .attr("width", 500)
-                .attr("height", 450);
+                .attr("height", 350);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(200,200)");
+                .attr("transform", "translate(175,175)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -341,6 +370,7 @@
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
                 .attr("text-anchor", "middle")
                 .attr("font-size", "1em")
+                .attr("fill", "white")
                 .text(function (d) {return d.data; });           
         </script>
 
