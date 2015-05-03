@@ -6,14 +6,25 @@
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <style>
         div {
-            float: left;
-            margin-left: 55px;
+          float: left;
+          margin: 0 0 0 150px;
+          font-family: 
         }
+
+        #explanation {
+          position: absolute;
+          top: 260px;
+          left: 305px;
+          width: 140px;
+          text-align: center;
+          color: #666;
+          z-index: -1;
+}
         </style>
     </head>
     <body>    
 
-         <div id="monday"></div>
+         <div id="monday"><h1>Monday</h1></div>
         <script type="text/javascript">
             var data = [100];
 
@@ -27,7 +38,7 @@
                 .attr("height", 450);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(300,300)");
+                .attr("transform", "translate(200,200)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -44,7 +55,7 @@
 
             arcs.append("path")
                 .attr("d", arc)
-                .attr("fill", function (d) { return color(d.data); }); 
+                .attr("fill", function (d) { return color(d.data); });
 
             arcs.append("text")
                 .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
@@ -54,7 +65,7 @@
 
 
         </script>
-         <div id="tuesday"></div>
+         <div id="tuesday"><h1>Tuesday</h1></div>
         <script type="text/javascript">
             var data = [22.31, 24.62, 22.30, 16.92, 14.62];
 
@@ -68,7 +79,7 @@
                 .attr("height", 450);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(300,300)");
+                .attr("transform", "translate(200,200)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -109,7 +120,7 @@
                 .attr("height", 450);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(300,300)");
+                .attr("transform", "translate(200,200)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -136,7 +147,7 @@
 
 
         </script>
-        <div id="wednesday"></div>
+        <div id="wednesday"><h1>Wednesday</h1></div>
         <script type="text/javascript">
             var data = [31.54, 36.92, 11.54, 16.15, 10.77];
 
@@ -150,7 +161,7 @@
                 .attr("height", 450);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(300,300)");
+                .attr("transform", "translate(200,200)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -191,7 +202,7 @@
                 .attr("height", 450);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(300,300)");
+                .attr("transform", "translate(200,200)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -216,7 +227,7 @@
                 .attr("font-size", "1em")
                 .text(function (d) {return d.data; });           
         </script>
-        <div id="thursday"></div>
+        <div id="thursday"><h1>Thursday</h1></div>
         <script type="text/javascript">
             var data = [23.08, 15.38, 9.23, 13.08, 13.85];
 
@@ -230,7 +241,7 @@
                 .attr("height", 450);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(300,300)");
+                .attr("transform", "translate(200,200)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -268,7 +279,7 @@
                 .attr("height", 450);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(300,300)");
+                .attr("transform", "translate(200,200)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
@@ -293,7 +304,7 @@
                 .attr("font-size", "1em")
                 .text(function (d) {return d.data; });           
         </script>
-        <div id="friday"></div>
+        <div id="friday"><h1>Friday</h1></div>
         <script type="text/javascript">
             var data = [23.08, 27.69, 10.77, 6.15, 16.92, 7.69, 3.85];
 
@@ -307,7 +318,7 @@
                 .attr("height", 450);
 
             var group = canvas.append("g")
-                .attr("transform", "translate(300,300)");
+                .attr("transform", "translate(200,200)");
 
             var arc = d3.svg.arc()
                 .innerRadius(75)
