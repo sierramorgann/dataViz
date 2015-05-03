@@ -94,6 +94,8 @@
             left: 550px;
         }
 
+        /*-----------------------------*/
+
         #rga2 {
             top: 750px;
             left: 1050px;
@@ -124,6 +126,8 @@
             left: 1050px;
         }
 
+        /*-------------------------*/
+
         #jwt {
             top: 1160px;
             left: 550px;
@@ -148,6 +152,8 @@
             top: 1320px;
             left: 550px;
         }
+
+        /*-------------------------------------*/
 
         #akqa {
             top: 1160px;
@@ -208,6 +214,69 @@
             top: 1750px;
             left: 550px;
         }
+        /*-------------------------------------*/
+
+         #google {
+            top: 1590px;
+            left: 1050px;
+        }
+
+        #ddb {
+            top: 1630px;
+            left: 1050px;
+        }
+
+        #rga3 {
+            top: 1670px;
+            left: 1050px;
+        }
+
+        #jwt2 {
+            top: 1710px;
+            left: 1050px;
+        }
+
+        #anomaly {
+            top: 1750px;
+            left: 1050px;
+        }
+
+        /*-------------------------------------------*/
+        #tbwa {
+            top: 1980px;
+            left: 550px;
+        }
+
+        #sunny {
+            top: 2020px;
+            left: 550px;
+        }
+
+        #hoo {
+            top: 2060px;
+            left: 550px;
+        }
+
+        #rokk {
+            top: 2100px;
+            left: 550px;
+        }
+
+        #droga {
+            top: 2140px;
+            left: 550px;
+        }
+
+        #v {
+            top: 2180px;
+            left: 550px;
+        }
+
+        #round {
+            top: 2220px;
+            left: 550px;
+        }
+        /*---------------------------------------------*/
 
         .title {
             position: absolute;
@@ -227,6 +296,8 @@
             margin-right: 10px;
             position: absolute;
         }
+
+        /*-------------------------------------------------*/
 
         #color {
             background-color: rgb(229,222,3);
@@ -376,6 +447,68 @@
         #color29 {
             background-color: rgb(204,193,32);
             top: 1690px;
+            left: 345px;
+        }
+        /*------------------------------------*/
+        #color30 {
+            background-color: rgb(204,119,32);
+            top: 1530px;
+            left: 845px;
+        }
+        #color31 {
+            background-color: rgb(255,64,54);
+            top: 1570px;
+            left: 845px;
+        }
+        #color32 {
+            background-color: rgb(153,131,108);
+            top: 1610px;
+            left: 845px;
+        }
+        #color33 {
+            background-color: rgb(255,106,65);
+            top: 1650px;
+            left: 845px;
+        }
+        #color34 {
+            background-color: rgb(60,255,142);
+            top: 1690px;
+            left: 845px;
+        }
+        /*---------------------------------------*/
+        #color35 {
+            background-color: rgb(18,60,204);
+            top: 1920px;
+            left: 345px;
+        }
+        #color36 {
+            background-color: rgb(55,77,153);
+            top: 1960px;
+            left: 345px;
+        }
+        #color37 {
+            background-color: rgb(24,198,255);
+            top: 2000px;
+            left: 345px;
+        }
+        #color38 {
+            background-color: rgb(255,104,19);
+            top: 2040px;
+            left: 345px;
+        }
+        #color39 {
+            background-color: rgb(204,97,68);
+            top: 2080px;
+            left: 345px;
+        }
+        #color40 {
+            background-color: rgb(78,114,204);
+            top: 2120px;
+            left: 345px;
+        }
+        #color41 {
+            background-color: rgb(108,121,153);
+            top: 2160px;
             left: 345px;
         }
         </style>
@@ -668,13 +801,19 @@
                 .attr("fill", "white")
                 .text(function (d) {return d.data + "%"; });           
         </script>
+        <div class="square" id="color30"></div><p class="title" id="google">Google labs</p>
+            <div class="square" id="color31"></div><p class="title" id="ddb">DDB</p>
+            <div class="square" id="color32"></div><p class="title" id="rga3">Rentrak</p>
+            <div class="square" id="color33"></div><p class="title" id="jwt2">Group M</p>
+            <div class="square" id="color34"></div><p class="title" id="anomaly">Quietman</p>
+        </div>    
         <script type="text/javascript">
-            var data = [29.23, 28.46, 12.31, 9.23, 6.92, 6.15];
+            var data = [29.23, 28.46, 12.31, 9.23, 6.92];
 
             var r = 150;
 
             var color = d3.scale.ordinal()
-                .range(["rgb(204,119,32)", "rgb(255,64,54)", "rgb(153,131,108)", "rgb(255,106,65)", "rgb(60,255,142)", "rgb(32,204,55)"]);
+                .range(["rgb(204,119,32)", "rgb(255,64,54)", "rgb(153,131,108)", "rgb(255,106,65)", "rgb(60,255,142)"]);
 
             var canvas = d3.select("#thursday").append("svg")
                 .attr("width", 500)
@@ -708,7 +847,15 @@
                 .text(function (d) {return d.data + "%"; });           
         </script>
         <h1 id="fri">Friday</h1>
-        <div id="friday"></div>
+        <div id="friday">
+            <div class="square" id="color35"></div><p class="title" id="tbwa">TBWA/CHIAT</p>
+            <div class="square" id="color36"></div><p class="title" id="sunny">72 & Sunny</p>
+            <div class="square" id="color37"></div><p class="title" id="hoo">Hooligan</p>
+            <div class="square" id="color38"></div><p class="title" id="rokk">Rokkan</p>
+            <div class="square" id="color39"></div><p class="title" id="droga">Droga</p>
+            <div class="square" id="color40"></div><p class="title" id="v">Vice</p>
+            <div class="square" id="color41"></div><p class="title" id="round">Roundhill Music</p>
+        </div>
         <script type="text/javascript">
             var data = [23.08, 27.69, 10.77, 6.15, 16.92, 7.69, 3.85];
 
